@@ -20,16 +20,15 @@ body {
     background-color: #121315;
     position: relative;
 }
-#main{
-}
 .cursor{
     z-index: 100;
-    position: absolute;
+    position: fixed;
     background-color:#C5FCFC;
     border-radius: 50%;
     width: 1.5vw;
     height: 1.5vw;
-    transition: all ease 0.1s;
+    mix-blend-mode: difference;
+    transition: all linear 0.1s;
 }
 nav{
     top: 0;
@@ -45,10 +44,14 @@ nav{
 nav img{
     padding-left: 6vw;
 }
+nav img:hover{
+    cursor: pointer;
+}
 nav .menu{
     padding-right: 6vw;
 }
 .nav-icon{
+    cursor: pointer;
     font-size: 1vw;
     font-weight: 100;
 }
