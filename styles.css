@@ -126,6 +126,7 @@ nav .menu{
 }
 .video h3{
     width: 13%;
+    position: relative;
     border: 2px solid #C5FCFC;
     height: 75%;
     color:#C5FCFC;
