@@ -59,31 +59,7 @@ navimg.addEventListener("mouseleave",function(){
 })
 }
 logoanime()
-function naviconanime(){
-  var navicon =document.querySelector(".menu")
-  var menuicon=document.querySelectorAll(".menu i")
-navicon.addEventListener("mouseenter",function(det){
-  // crsr.style.width="2.5vw"
-  // crsr.style.height="2.5vw"
-  gsap.to(".cursor",{
-    scale:3.5,
-    duration:0.1,
-    filter: "blur(3px)"
-  })
-  gspa.to(menuicon,{
-    scale:4
-  })
-})
-navicon.addEventListener("mouseleave",function(){
-  // crsr.style.width="1.5vw"
-  // crsr.style.height="1.5vw"
-  gsap.to(".cursor",{
-    scale:1,
-    duration:0.1,
-    filter: "blur(0px)"
-  })
-})
-}
+
 naviconanime()
 function videoanime(){
   gsap.to(".page-1 video",{
