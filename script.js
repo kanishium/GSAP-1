@@ -407,29 +407,71 @@ function cardsanime(){
 }
  cardsanime()
 
-//  var tl6 =gsap.timeline({
-//   scrollTrigger:{
-//     trigger:".page-4 h1",
-//     scroll:"#main",
-//     // markers:true,
-//     start:"top 80%",
-//     end:"top 30%",
-//     scrub:3
-//   }
-// })
-// tl6.from(".who h1",{
-//   x:-200,
-//   stagger:1,
-//   duration:2
-// },"he")
-// tl6.from(".we-are h1",{
-//   x:300,
-//   stagger:1,
-//   duration:2
-// },"he")
-// tl6.to(".page-4 h1",{
-//   width:"100%",
-//   color:"transperent",
-//   duration:2,
-//   delay:1
-// },"he")
+function partneranime(){
+  var tl6 =gsap.timeline({
+    scrollTrigger:{
+      trigger:".page-4 h1",
+      scroll:"#main",
+      // markers:true,
+      start:"top 60%",
+      end:"top -10%",
+      scrub:2
+    }
+  })
+  tl6.from(".who h1",{
+    x:200,
+    // stagger:1,
+    duration:3
+  },"he")
+  tl6.from(".we-are h1",{
+    x:-300,
+    // stagger:1,
+    delay:2,
+    duration:10,
+  },"he")
+  tl6.to(".page-4 h1",{
+    width:"105%",
+    color:"transperent",
+    duration:10,
+    stagger:2,
+  },"he")
+}
+partneranime()
+ var wild=document.querySelector(".wild")
+window.addEventListener("wheel",function(dets){
+  if(dets.deltaY>0){
+    gsap.to(wild,{
+      transform:"translate(-100%)",
+      repeat:-1,
+      duration:8,
+      ease:"none"
+    })
+  }
+  else{
+    gsap.to(wild,{
+      transform:"translate(100%)",
+      repeat:-1,
+      duration:8,
+      ease:"none"
+    })
+  }
+})
+ var dive=document.querySelector(".dive")
+window.addEventListener("wheel",function(dets){
+  if(dets.deltaY>0){
+    gsap.to(dive,{
+      transform:"translate(100%)",
+      repeat:-1,
+      duration:8,
+      ease:"none"
+    })
+  }
+  else{
+    gsap.to(dive,{
+      transform:"translate(-100%)",
+      repeat:-1,
+      duration:8,
+      ease:"none"
+    })
+  }
+})
