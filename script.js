@@ -109,21 +109,21 @@ for (let child of menuchild) {
 menuanime()
 var video=document.querySelectorAll(".video h3")
 video.forEach(element => {
-  element.addEventListener("mousemove",function(dets){
+  element.addEventListener("mouseenter",function(){
     element.style.backgroundColor="#C5FCFC"
     element.style.color="black"
-    element.style.fontSize="0.5vw"
-    element.style.left=dets.x
-    element.style.top=dets.y
-    gsap.to(".video h3",{
-      scale:1.3
+    gsap.to(crsr,{
+      backgroundColor:"black",
+      // mixBlendMode:"normal",
+      scale:2.9,
+      filter:"blur(2px)"
     })
   })
   element.addEventListener("mouseleave",function(){
     element.style.backgroundColor="transparent"
     element.style.color="#C5FCFC"
-    gsap.to("element",{
-      borderRadius:"0%"
+    gsap.to(crsr,{
+      backgroundColor:"#C5FCFC"
     })
   })
 });
