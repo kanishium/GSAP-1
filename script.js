@@ -437,7 +437,8 @@ function partneranime(){
   },"he")
 }
 partneranime()
- var wild=document.querySelector(".wild")
+function scrollinganime(){
+  var wild=document.querySelector(".wild")
 window.addEventListener("wheel",function(dets){
   if(dets.deltaY>0){
     gsap.to(wild,{
@@ -474,4 +475,17 @@ window.addEventListener("wheel",function(dets){
       ease:"none"
     })
   }
+})
+}
+scrollinganime()
+var dragger=document.querySelector(".picdragger")
+dragger.addEventListener("mouseenter",function(){
+  crsr.textContent="drag"
+  gsap.to(crsr,{
+    width:"5.5vw",
+    height:"5.5vw",
+  })
+})
+dragger.addEventListener("dblclick",function(){
+  crsr.textContent="dragging"
 })
