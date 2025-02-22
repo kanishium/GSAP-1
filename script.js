@@ -478,14 +478,26 @@ window.addEventListener("wheel",function(dets){
 })
 }
 scrollinganime()
-var dragger=document.querySelector(".picdragger")
-dragger.addEventListener("mouseenter",function(){
-  crsr.textContent="drag"
-  gsap.to(crsr,{
-    width:"5.5vw",
-    height:"5.5vw",
+function draggeranime(){
+  var draggercon=document.querySelectorAll(".drag-overlay")
+draggercon.forEach(dragger => {
+  dragger.addEventListener("mouseenter",function(){
+    crsr.textContent="drag"
+    crsr.style.setProperty("--before-opacity", "1");
+    gsap.to(crsr,{
+      width:"5.5vw",
+      height:"5.5vw",
+    })
   })
-})
-dragger.addEventListener("dblclick",function(){
-  crsr.textContent="dragging"
-})
+  dragger.addEventListener("mouseleave",function(){
+    crsr.textContent=""
+    crsr.style.setProperty("--before-opacity", "0");
+    gsap.to(crsr,{
+      width:"1.5vw",
+      height:"1.5vw",
+    })
+  })
+  
+});
+}
+draggeranime()

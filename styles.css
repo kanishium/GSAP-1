@@ -21,10 +21,10 @@ body {
     position: relative;
 }
 #main{
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 .cursor{
-    transform: translate(-50% -50%);
+    transform: translate(-50%,-50%);
     z-index: 10;
     position: fixed;
     background-color:#C5FCFC;
@@ -33,9 +33,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: syne;
     height: 1.5vw;
     mix-blend-mode: difference;
     transition: all linear 0.1s;
+    --before-opacity: 0; 
+}
+.cursor::before{
+    width: 150%;
+    height: 150%;
+    content: "";
+    border-radius:50% ;
+    z-index: -8;
+    filter: blur(9px);
+    opacity: var(--before-opacity);
+    position: absolute;
+    background-color: #C5FCFC;
 }
 nav{
     top: 0;
@@ -803,7 +816,84 @@ nav .menu{
     font-family: syne;
     font-size: 2.3vw;
 }
+.drag{
+    width: 100%;
+    height: auto;
+    color: #E0EEEE;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+.picdragger{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.drag-pic{
+    position: relative;
+    border: 2px solid #E0EEEE;
+    border-radius: 3vw;
+    height: 110vh;
+    margin: 1vw;
+    /* background-color: #D8C93D; */
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    transition: transform 5s ease-in-out;
+}
+.drag-overlay{
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    z-index: 11;
+}
+.drag-pic:hover{
+    border: none;
+    background-color: #17181B;
+}
+.drag-pic:hover img{
+    transform: rotate(-7deg) scale(1.1);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.drag-pic img{
+    margin-top: 23vh;
+    width: 25%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.drag-pic h2{
+    /* background-color: #BD3003; */
+    font-family: syne;
+    font-size: 2vw;
+    margin-top: 4.3vh;
+    font-weight: 500;
+
+}
+.drag-pic h4{
+    /* background-color: #A1C9B8; */
+    font-family: syne;
+    font-weight: 300;
+    margin-top: 1.5vh;
+    font-size: 1.1vw;
+}
+.drag-pic h3{
+    background-color: #EB0000;
+    font-size: 1.3vw;
+    padding: 1vw 2.5vw;
+    margin-top: 6vh;
+    border-radius: 2vw;
+    font-weight: 200;
+}
+
 .scroller{
+    margin-top: 40vh;
     transform: translate(-100%);
     display: flex;
     flex-direction: column;
@@ -836,58 +926,4 @@ nav .menu{
     font-size: 16vw;
     font-weight: 200;
     font-family: Dirtyline;
-}
-.drag{
-    color: #E0EEEE;
-    /* background-color: pink; */
-    display: flex;
-    align-items: center;
-    overflow-x: scroll;
-}
-.picdragger{
-    /* background-color: red; */
-    display: flex;
-
-    align-items: center;
-}
-.drag-pic{
-    border: 2px solid #E0EEEE;
-    border-radius: 3vw;
-    height: 110vh;
-    margin: 1vw;
-    /* background-color: #D8C93D; */
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-}
-.drag-pic img{
-    margin-top: 23vh;
-    width: 25%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.drag-pic h2{
-    /* background-color: #BD3003; */
-    font-family: syne;
-    font-size: 2vw;
-    margin-top: 4.3vh;
-    font-weight: 500;
-
-}
-.drag-pic h4{
-    /* background-color: #A1C9B8; */
-    font-family: syne;
-    font-weight: 300;
-    margin-top: 1.5vh;
-    font-size: 1.1vw;
-}
-.drag-pic h3{
-    background-color: #EB0000;
-    font-size: 1.3vw;
-    padding: 1vw 2.5vw;
-    margin-top: 6vh;
-    border-radius: 2vw;
-    font-weight: 200;
 }
