@@ -169,7 +169,7 @@ function recentanime(){
     y:-50
   })
 }
-
+recentanime()
 function pg2spananime(){
   var tl2 =gsap.timeline({
     scrollTrigger:{
@@ -501,3 +501,21 @@ draggercon.forEach(dragger => {
 });
 }
 draggeranime()
+var wild=document.querySelector(".scroller")
+wild.addEventListener("mouseenter",function(){
+  // crsr.style.setProperty("--before-opacity", "1");
+  gsap.to(crsr,{
+    filter:"blur(8vw)",
+    width:"30.5vw",
+    height:"30.5vw",
+    
+  })
+})
+wild.addEventListener("mouseleave",function(){
+  // crsr.style.setProperty("--before-opacity", "1");
+  gsap.to(crsr,{
+    filter:"blur(0vw)",
+    width:"1.5vw",
+    height:"1.5vw",
+  })
+})

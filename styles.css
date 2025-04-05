@@ -894,10 +894,12 @@ nav .menu{
 
 .scroller{
     margin-top: 40vh;
-    transform: translate(-100%);
+    transform: translate(-150%);
     display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 0.1vw;
+    position: relative;
 }
 .wild {
     width: 100%;
@@ -926,4 +928,12 @@ nav .menu{
     font-size: 16vw;
     font-weight: 200;
     font-family: Dirtyline;
+}
+.scrolloverlay{
+    background-color: red;
+    height: 100%;
+    opacity: 0;
+    z-index: 99999;
+    width: 200%;
+    position: absolute;
 }
