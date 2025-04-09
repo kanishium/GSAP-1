@@ -501,7 +501,8 @@ draggercon.forEach(dragger => {
 });
 }
 draggeranime()
-var wild=document.querySelector(".scroller")
+function marqueone(){
+  var wild=document.querySelector(".scroller")
 wild.addEventListener("mouseenter",function(){
   // crsr.style.setProperty("--before-opacity", "1");
   gsap.to(crsr,{
@@ -517,5 +518,22 @@ wild.addEventListener("mouseleave",function(){
     filter:"blur(0vw)",
     width:"1.5vw",
     height:"1.5vw",
+  })
+})
+}
+marqueone()
+var soc=document.querySelectorAll(".soc")
+soc.forEach(function(e){
+  e.addEventListener("mouseenter",function(){
+    gsap.to(soc,{
+      width:"100%"
+    })
+  })
+})
+soc.forEach(function(e){
+  e.addEventListener("mouseleave",function(){
+    gsap.to(soc,{
+      width:"60%"
+    })
   })
 })
