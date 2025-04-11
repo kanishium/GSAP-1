@@ -523,17 +523,26 @@ wild.addEventListener("mouseleave",function(){
 }
 marqueone()
 var soc=document.querySelectorAll(".soc")
-soc.forEach(function(e){
-  e.addEventListener("mouseenter",function(){
+var socover=document.querySelectorAll(".socoverlay")
+var socimg=document.querySelectorAll(".soc img:first-of-type")
+  socover.forEach(function(f){
+    f.addEventListener("mouseenter",function(){
+      gsap.to(soc,{
+        width:"100%"
+      })
+      gsap.to(socimg,{
+        rotate:"360deg"
+      })
+    })
+  })
+socover.forEach(function(f){
+  f.addEventListener("mouseleave",function(){
     gsap.to(soc,{
-      width:"100%"
+      width:"65%"
+    })
+    gsap.to(socimg,{
+      rotate:"0deg"
     })
   })
 })
-soc.forEach(function(e){
-  e.addEventListener("mouseleave",function(){
-    gsap.to(soc,{
-      width:"60%"
-    })
-  })
-})
+

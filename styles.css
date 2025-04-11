@@ -946,24 +946,30 @@ nav .menu{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     /* background-color: blue; */
     width: 80%;
+    transform: translate(10%);
 }
 .socoverlay{
     background-color: #BD3003;
     width: 100%;
+    opacity: 0.5;  
+    /* display: none; */
     height: 100%;
+    position: absolute;
+    z-index: 15;
 }
 .soc{
     /* background-color: #A1C9B8; */
     width: 65%;
-    margin-top: 40px;
+    height: 25vh;
+    position: relative;
+    /* margin-top: 40px; */
     color:#E0EEEE;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     position: relative;
     border-bottom: 1px solid #E0EEEE;
 }
@@ -974,6 +980,6 @@ nav .menu{
 }
 .soc img:last-child{
     left: 99.5%;
-    top: 96%;
+    top: 97%;
     position: absolute;
 }
