@@ -953,18 +953,17 @@ nav .menu{
 .socoverlay{
     background-color: #BD3003;
     width: 100%;
-    opacity: 0.5;  
+    opacity: 0;  
     /* display: none; */
     height: 100%;
     position: absolute;
-    z-index: 15;
+    z-index:100;
 }
 .soc{
-    /* background-color: #A1C9B8; */
     width: 65%;
+    z-index: 8;
     height: 25vh;
     position: relative;
-    /* margin-top: 40px; */
     color:#E0EEEE;
     display: flex;
     align-items: center;

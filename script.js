@@ -7,7 +7,6 @@ const locoScroll = new LocomotiveScroll({
   smooth: true
 });
 locoScroll.on("scroll", ScrollTrigger.update);
-
 ScrollTrigger.scrollerProxy("#main", {
   scrollTop(value) {
     return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -525,6 +524,18 @@ marqueone()
 var soc=document.querySelectorAll(".soc")
 var socover=document.querySelectorAll(".socoverlay")
 var socimg=document.querySelectorAll(".soc img:first-of-type")
+gsap.from(soc,{
+  y:100,
+  opacity:0,
+    stagger:0.3,
+  scrollTrigger:{
+    trigger:".soc",
+    scroll:"#main",
+    markers:"true",
+    start:"top 85%",
+    scrub:2
+  }
+})
   socover.forEach(function(f){
     f.addEventListener("mouseenter",function(){
       gsap.to(soc,{
