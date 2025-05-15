@@ -521,39 +521,45 @@ wild.addEventListener("mouseleave",function(){
 })
 }
 marqueone()
+function socials(){
+var socials=document.querySelectorAll(".socoverlay");
 var soc=document.querySelectorAll(".soc")
-var socover=document.querySelectorAll(".socoverlay")
-var socimg=document.querySelectorAll(".soc img:first-of-type")
-gsap.from(soc,{
-  y:100,
-  opacity:0,
-    stagger:0.3,
-  scrollTrigger:{
-    trigger:".soc",
-    scroll:"#main",
-    markers:"true",
-    start:"top 85%",
-    scrub:2
-  }
-})
-  socover.forEach(function(f){
-    f.addEventListener("mouseenter",function(){
-      gsap.to(soc,{
-        width:"100%"
-      })
-      gsap.to(socimg,{
-        rotate:"360deg"
-      })
+socials.forEach((element,index) => {
+  element.addEventListener("mouseenter",function(){
+    gsap.to(crsr,{
+      scale:0,
+      display:"none",
+    })
+    gsap.to(soc[index],{
+      width:"80%",
+      duration:0.6,
+      opacity:1,
+    })
+    const firstImage = soc[index].querySelector("img:first-of-type");
+    gsap.to(firstImage,{
+      rotateZ:"180deg",
+      duration:1
     })
   })
-socover.forEach(function(f){
-  f.addEventListener("mouseleave",function(){
-    gsap.to(soc,{
-      width:"65%"
+  element.addEventListener("mouseleave",function(){
+    gsap.to(crsr,{
+      scale:1,
+      duration:0.4,
+      display:"block",
+      filter: "blur(0px)"
     })
-    gsap.to(socimg,{
-      rotate:"0deg"
+    gsap.to(soc[index],{
+      width:"55%",
+      duration:0.6
+    })
+    const firstImage = soc[index].querySelector("img:first-of-type");
+    gsap.to(firstImage,{
+      rotateZ:"0deg",
+      duration:1
     })
   })
-})
+}
+)
 
+}
+socials()
