@@ -980,3 +980,105 @@ nav .menu{
     top: 97%;
     position: absolute;
 }
+.page-6{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+}
+.page-6 h1{
+    padding-left: 6vw;
+    line-height: 13vw;
+    font-family: Dirtyline;
+    font-size: 17vw;
+    opacity: 1;
+    font-weight: 100;
+    color: #E0EEEE;
+}
+.roar-div{
+    margin: 0 5vw 0 0vw;
+    width: 90vw;
+    /* background: #000; */
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+}
+.roar{
+    position: relative;
+}
+.over-text-roar{
+    position: absolute;
+    width: 80%;
+    top: -3vh;
+    z-index: 2;
+    height: 100%;
+    background-color:#121315 ;
+}
+.roar-explore{
+    width: 13%;
+    border: 2px solid #C5FCFC;
+    height: 10vh;
+    color:#000;
+    background-color: #C5FCFC;
+    font-size: 1.1vw;
+    padding: 0 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    /* overflow: hidden; */
+}
+.roar-explore h3{
+    font-weight: 100;
+}
+.dets{
+    color: #C8D1D1;
+    margin: 0 8vw 0 6vw;
+    width: 84vw;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phone{
+    margin-left: 2vw;
+}
+.page-6 hr{
+    width: 90vw;
+    margin-left:5vw ;
+}
+.phone h3{
+    font-size: 1.2vw;
+    font-weight: 200;
+}
+.email h3{
+    font-size: 1.2vw;
+    font-weight: 200;
+}
+.team h3{
+    font-size: 1.2vw;
+    font-weight: 200;
+}
+.phone h2{
+    margin-top: 1vw;
+    font-size: 2.2vw;
+    font-weight: 200;
+}
+.email h2{
+    font-size: 2.2vw;
+    font-weight: 200;
+    margin-top: 1vw;
+}
+.team h2{
+    margin-top: 1vw;
+    font-size: 2.2vw;
+    font-weight: 200;
+}
+.ids{
+    width: 60%;
+    display: flex;
+}
+.team{
+    text-align: right;
+    width: 21%;
+}

@@ -563,3 +563,30 @@ socials.forEach((element,index) => {
 
 }
 socials()
+function roaranime(){
+  var tl =gsap.timeline({
+    scrollTrigger:{
+      trigger:".roar h1",
+      scroll:"#main",
+      start:"top 90%",
+      end:"top 15%",
+      markers:true,
+      scrub:5
+    }
+  })
+  tl.from(".roar h1",{
+    x:-500,
+    stagger:0.2,
+    opacity:0,
+    
+  },"yo")
+  tl.to(".over-text-roar",{
+    width:"0%",
+    delay:0.1
+  },"yo")
+  tl.from(".roar-explore",{
+    y:100,
+    duration:1,
+  })
+}
+roaranime()
