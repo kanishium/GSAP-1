@@ -23,11 +23,19 @@ body {
 #main{
     overflow-x: hidden;
 }
+.loader{
+    position: absolute;
+    background-color:#17181B;
+    width: 100%;
+    display: block;
+    z-index: 1000;
+    height: 100%;
+}
 .cursor{
     transform: translate(-50%,-50%);
     z-index: 10;
     position: fixed;
-    background-color:#C5FCFC;
+    background-color:#c5fcfc00;
     border-radius: 50%;
     width: 1.5vw;
     display: flex;

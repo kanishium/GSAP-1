@@ -22,7 +22,16 @@ ScrollTrigger.refresh();
 
 }
 // inti()
-var crsr=document.querySelector(".cursor")
+// var crsr=document.querySelector(".cursor")
+
+var load=document.querySelector(".loader")
+setTimeout(() => {
+  gsap.to(load,{
+    display:"none",
+    width:"0",
+    height:"0"
+  })
+}, 4500);
 
 function cursoranime(){
   var main=document.querySelector("#main")
@@ -150,7 +159,7 @@ function recentanime(){
       scroll:"#main",
       start:"top 80%",
       end:"top 15%",
-      // markers:true,
+      markers:true,
       scrub:2
     }
   })
@@ -570,7 +579,7 @@ function roaranime(){
       scroll:"#main",
       start:"top 90%",
       end:"top 15%",
-      markers:true,
+      // markers:true,
       scrub:5
     }
   })
