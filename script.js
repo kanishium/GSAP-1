@@ -22,7 +22,7 @@ ScrollTrigger.refresh();
 
 }
 // inti()
-// var crsr=document.querySelector(".cursor")
+var crsr=document.querySelector(".cursor")
 
 var load=document.querySelector(".loader")
 setTimeout(() => {
@@ -131,11 +131,12 @@ video.forEach(element => {
     element.style.backgroundColor="transparent"
     element.style.color="#C5FCFC"
     gsap.to(crsr,{
-      backgroundColor:"#C5FCFC"
+      backgroundColor:"#C5FCFC",
+      scale:1,
+      filter:"blur(0px)"
     })
   })
 });
-
 function videoanime(){
   gsap.to(".page-1 video",{
     width:"87%",
@@ -159,13 +160,13 @@ function recentanime(){
       scroll:"#main",
       start:"top 80%",
       end:"top 15%",
-      markers:true,
-      scrub:2
+      // markers:true,
+      scrub:3
     }
   })
   tl.from(".recents h1",{
     x:-500,
-    stagger:0.1,
+    stagger:0.2,
     opacity:0,
     
   },"yo")

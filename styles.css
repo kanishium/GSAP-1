@@ -35,7 +35,7 @@ body {
     transform: translate(-50%,-50%);
     z-index: 10;
     position: fixed;
-    background-color:#c5fcfc00;
+    background-color:#C5FCFC;
     border-radius: 50%;
     width: 1.5vw;
     display: flex;
