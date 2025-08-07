@@ -10,12 +10,15 @@
 https://trionn.com/favicon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 </head>
 
 <body>
-    <div class="loader"></div>
-        <div class="cursor"></div>
+    <div class="loader">
+        <dotlottie-wc class="loadanime" src="https://lottie.host/b552b6fe-89fa-41a5-9955-e114f1884705/ZqJsOGkBJI.lottie"
+            style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+    </div>
+    <div class="cursor"></div>
     <div id="main">
         <nav>
             <img src="https://trionn.com/assets/images/logo.svg" alt="">
@@ -42,7 +45,9 @@ https://trionn.com/favicon.svg" type="image/x-icon">
                 <h3>Explore work</h3>
                 <h3>Get in touch</h3>
             </div>
-            <video autoplay muted loop src="https://trionn.com/assets/images/home/intro-video.mp4"></video>
+            <div class="mp3">
+                <video autoplay muted loop src="https://trionn.com/assets/images/home/intro-video.mp4"></video>
+            </div>
         </div>
         <div class="page-2">
             <div class="recents">

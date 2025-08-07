@@ -27,9 +27,11 @@ body {
     position: absolute;
     background-color:#17181B;
     width: 100%;
-    display: block;
+    display: flex;
     z-index: 1000;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 .cursor{
     transform: translate(-50%,-50%);
@@ -182,14 +184,21 @@ nav .menu{
     background-color: transparent;
     position: absolute;
 }
-
-.page-1 video{
-    top:-15vh;
+.mp3{
+    /* background-color: #BD3003; */
+    height: 100vh;
     position: relative;
-    width: 12%;
-    border: none;
-    border-radius: 5vw;
 }
+.mp3 video{
+    top:-16vh;
+    position: relative;
+    width: 14%;
+    height: 16vh;
+    border-radius: 2vw; /* more visible on large video */
+    object-fit: cover; 
+    background: #121315;
+}
+
 .page-2{
     /* background-color: #C5FCFC; */
     min-height: 100vh;

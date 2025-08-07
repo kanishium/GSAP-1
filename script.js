@@ -25,13 +25,20 @@ ScrollTrigger.refresh();
 var crsr=document.querySelector(".cursor")
 
 var load=document.querySelector(".loader")
+var loadanime=document.querySelector(".loadanime")
+setTimeout(()=>{
+  gsap.to(loadanime,{
+    opacity:0
+  })
+},3900)
 setTimeout(() => {
   gsap.to(load,{
     display:"none",
     width:"0",
-    height:"0"
+    // height:"0"
+    scrub:5
   })
-}, 4500);
+}, 4000);
 
 function cursoranime(){
   var main=document.querySelector("#main")
@@ -139,15 +146,17 @@ video.forEach(element => {
 });
 function videoanime(){
   gsap.to(".page-1 video",{
-    width:"87%",
+    width:"83%",
+    height:"100%",
     borderRadius:"4.9vw",
-    y:100,
+    top:"0vh",
     duration:0.1,
     scrollTrigger:{
       trigger:".page-1 video",
       scroll:"#main",
-      start:"top 65%",
-      end:"top 25%",
+      start:"top 50%",
+      // markers:"true",
+      end:"top 15%",
       scrub:2
     }
   })
@@ -423,26 +432,26 @@ function partneranime(){
       scroll:"#main",
       // markers:true,
       start:"top 60%",
-      end:"top -10%",
-      scrub:2
+      end:"top 40%",
+      scrub:3
     }
   })
   tl6.from(".who h1",{
-    x:200,
+    x:-200,
     // stagger:1,
     duration:3
   },"he")
   tl6.from(".we-are h1",{
-    x:-300,
+    x:-200,
     // stagger:1,
     delay:2,
-    duration:10,
+    duration:3,
   },"he")
   tl6.to(".page-4 h1",{
-    width:"105%",
+    width:"101%",
     color:"transperent",
     duration:10,
-    stagger:2,
+    stagger:0,
   },"he")
 }
 partneranime()
